@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Falesia · Lecco Verticale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body data-root="../" data-pagina="arrampicata" data-sotto="mappa">
+  <div id="header"></div>
+  <div id="subnav" data-sezione="arrampicata"></div>
+
+  <main class="contenitore" id="contenuto">
+    <p class="vuoto" style="margin-top:32px">Caricamento della falesia…</p>
+  </main>
+
+  <dialog class="dialogo" id="dialogo-via" aria-labelledby="dv-titolo">
+    <form method="dialog" id="form-via">
+      <h3 id="dv-titolo">Via</h3>
+      <p class="nota" id="dv-sotto" style="margin-top:-6px"></p>
+      <label class="check-riga"><input type="checkbox" id="dv-fatta"> L'ho fatta</label>
+      <div class="campo-riga">
+        <label for="dv-data">Data</label>
+        <input class="campo-testo" type="date" id="dv-data">
+      </div>
+      <div class="campo-riga">
+        <span class="etichetta" id="dv-stelle-et">La tua valutazione</span>
+        <div class="stelle" id="dv-stelle" role="group" aria-labelledby="dv-stelle-et"></div>
+      </div>
+      <div class="campo-riga">
+        <label for="dv-nota">Nota o recensione</label>
+        <textarea class="campo-area" id="dv-nota" rows="3" maxlength="500" placeholder="Com'era la roccia, come sono i passi, consigli…"></textarea>
+      </div>
+      <div class="dialogo-azioni">
+        <button type="button" class="btn-testo" id="dv-rimuovi">Rimuovi</button>
+        <span style="flex:1"></span>
+        <button type="button" class="btn btn-chiaro-scuro" id="dv-annulla">Annulla</button>
+        <button type="submit" class="btn btn-pieno" id="dv-salva" value="salva">Salva</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="footer"></div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../data/falesie.js"></script>
+  <script src="../js/arrampicata-comune.js"></script>
+  <script src="../js/meteo.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="../js/arrampicata-falesia.js"></script>
+</body>
+</html>

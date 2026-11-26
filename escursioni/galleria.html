@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galleria · Lecco Verticale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body data-root="../" data-pagina="escursioni" data-sotto="galleria" data-titolo="Galleria escursioni">
+  <div id="header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="contenitore">
+        <p class="occhiello">Escursioni</p>
+        <h1>Galleria</h1>
+        <p>Le foto dei miei giri, divise per montagna. Clicca su una foto per ingrandirla.</p>
+      </div>
+    </section>
+    <div id="subnav" data-sezione="escursioni"></div>
+
+    <section class="sezione contenitore">
+      <div class="filtri">
+        <div>
+          <span class="etichetta">Montagna</span>
+          <div class="chips" id="filtro-montagna"></div>
+        </div>
+      </div>
+      <div class="griglia-foto" id="griglia"></div>
+    </section>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ingrandita">
+    <button class="lightbox-chiudi" id="lb-chiudi" aria-label="Chiudi">×</button>
+    <button class="lightbox-nav prec" id="lb-prec" aria-label="Foto precedente">‹</button>
+    <button class="lightbox-nav succ" id="lb-succ" aria-label="Foto successiva">›</button>
+    <div class="lightbox-img" id="lb-img" role="img"></div>
+    <div class="lightbox-barra"><span id="lb-didascalia"></span><a id="lb-link" href="#">Vai al percorso →</a></div>
+  </dialog>
+
+  <div id="footer"></div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../data/percorsi.js"></script>
+  <script src="../js/galleria-escursioni.js"></script>
+</body>
+</html>

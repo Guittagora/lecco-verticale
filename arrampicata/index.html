@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mappa falesie · Lecco Verticale</title>
+  <meta name="description" content="Le falesie attorno a Lecco su una mappa interattiva: gradi, avvicinamento, esposizione e foto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body data-root="../" data-pagina="arrampicata" data-sotto="mappa" data-titolo="Mappa falesie">
+  <div id="header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="contenitore">
+        <p class="occhiello">Arrampicata</p>
+        <h1>Le falesie</h1>
+        <p>Clicca su un segnaposto per vedere gradi, esposizione e avvicinamento, poi apri la scheda completa con tutte le vie.</p>
+      </div>
+    </section>
+    <div id="subnav" data-sezione="arrampicata"></div>
+
+    <section class="sezione contenitore">
+      <div class="mappa mappa-grande" id="mappa" role="region" aria-label="Mappa delle falesie"></div>
+
+      <div class="titolo-sezione" style="margin-top:40px">
+        <h2>Tutte le falesie</h2>
+        <p>Le schede sono in costruzione: vie e gradi sono dimostrativi e verranno completati con i dati raccolti in falesia.</p>
+      </div>
+      <div class="griglia-percorsi" id="elenco"></div>
+      <p class="fonte">I gradi sono indicativi. Verifica sempre lo stato della roccia e delle protezioni prima di arrampicare.</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../data/falesie.js"></script>
+  <script src="../js/arrampicata-comune.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="../js/arrampicata-mappa.js"></script>
+</body>
+</html>

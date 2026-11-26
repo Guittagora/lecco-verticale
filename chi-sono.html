@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi sono · Lecco Verticale</title>
+  <meta name="description" content="Chi c'è dietro Lecco Verticale e perché ho voluto raccogliere qui sentieri e falesie della mia zona.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body data-root="" data-pagina="chi-sono" data-titolo="Chi sono">
+  <div id="header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="contenitore">
+        <p class="occhiello">Chi sono</p>
+        <h1>Ciao, sono <span data-sito="autore">Iacopo</span></h1>
+        <p>Un appassionato di montagna che vive tra le Grigne e il lago.</p>
+      </div>
+    </section>
+
+    <section class="sezione contenitore">
+      <div class="chi-sono-anteprima">
+        <div class="foto-ritratto" style="--img: url('../img/chi-sono/ritratto.jpg')" role="img" aria-label="Foto di Iacopo"></div>
+        <div>
+          <!-- Testo di esempio: riscrivilo con la tua storia -->
+          <h2>La mia storia</h2>
+          <p>
+            Vivo vicino a Lecco e appena posso salgo: un giro in Grignetta prima del lavoro, una giornata
+            in falesia nel weekend, il Resegone d'inverno. Qui raccolgo i percorsi e le pareti che conosco
+            meglio, con tracce, foto e consigli pratici.
+          </p>
+          <p>
+            Ho creato questo sito per tenere tutto in un posto solo e perché mi piacerebbe che più persone
+            scoprissero quanto è bella la montagna sopra casa nostra, anche partendo da zero.
+          </p>
+          <div class="hero-azioni" style="margin-top:20px">
+            <a class="btn btn-pieno" href="esci-con-me.html">Esci con me</a>
+            <a class="btn btn-chiaro-scuro" data-sito="instagram" href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sezione contenitore" style="padding-top:0">
+      <div class="titolo-sezione">
+        <p class="occhiello">Cosa trovi qui</p>
+        <h2>Le mie due passioni</h2>
+      </div>
+      <div class="griglia-sezioni">
+        <a class="card-sezione card-bassa" href="escursioni/index.html" style="--img: url('../img/home/escursioni.jpg'); --colore: #3d5f4a">
+          <h3>Escursioni</h3>
+          <p>Percorsi tra Grigna, Grignetta, Resegone, Cornizzolo e Monte Barro.</p>
+          <span class="card-sezione-link">Vai ai sentieri →</span>
+        </a>
+        <a class="card-sezione card-bassa" href="arrampicata/index.html" style="--img: url('../img/home/arrampicata.jpg'); --colore: #6b4a34">
+          <h3>Arrampicata</h3>
+          <p>Le falesie della zona, le vie e il mio logbook personale.</p>
+          <span class="card-sezione-link">Vai alle falesie →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

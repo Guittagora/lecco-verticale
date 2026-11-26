@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lecco Verticale</title>
+  <meta name="description" content="Escursioni e falesie attorno a Lecco: Grigna, Grignetta, Resegone, Cornizzolo e Monte Barro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body data-root="" data-pagina="home">
+  <div id="header"></div>
+
+  <main>
+    <!-- Hero: metti la tua foto in img/home/hero.jpg -->
+    <section class="hero" style="--img: url('../img/home/hero.jpg')">
+      <div class="contenitore hero-contenuto">
+        <p class="occhiello">Grigne · Resegone · Cornizzolo · Monte Barro</p>
+        <h1 data-sito="nome">Lecco Verticale</h1>
+        <p class="hero-coordinate" aria-hidden="true">45°51′ N · 9°23′ E · Lecco 214<span class="unita">m</span></p>
+        <p class="hero-sottotitolo">Sentieri e falesie sopra il lago, raccontati da chi ci va ogni settimana.</p>
+        <div class="hero-azioni">
+          <a class="btn btn-primario" href="#sezioni">Scegli da dove partire</a>
+          <a class="btn btn-chiaro" href="esci-con-me.html">Esci con me</a>
+        </div>
+      </div>
+      <svg class="hero-montagne" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+        <path class="m1" d="M0 150 L120 110 L210 140 L330 60 L400 95 L470 40 L560 120 L680 90 L790 130 L900 70 L980 100 L1080 30 L1170 110 L1290 80 L1380 120 L1440 100 L1440 260 L0 260 Z"/>
+        <path class="m2" d="M0 190 L90 160 L180 185 L300 120 L380 150 L520 100 L640 170 L760 140 L860 175 L990 115 L1100 160 L1220 125 L1340 170 L1440 150 L1440 260 L0 260 Z"/>
+        <path class="m3" d="M0 235 L160 215 L340 228 L520 205 L720 225 L900 210 L1100 228 L1280 212 L1440 225 L1440 260 L0 260 Z"/>
+      </svg>
+    </section>
+
+    <!-- Le sezioni del sito -->
+    <section id="sezioni" class="sezione contenitore">
+      <div class="titolo-sezione">
+        <p class="occhiello">Le sezioni</p>
+        <h2>Da dove vuoi partire?</h2>
+      </div>
+      <div class="griglia-sezioni griglia-sfalsata">
+        <a class="card-sezione" href="escursioni/index.html" style="--img: url('../img/home/escursioni.jpg'); --colore: #3d5f4a">
+          <span class="card-sezione-numero" aria-hidden="true">6<small>percorsi</small></span>
+          <span class="card-sezione-icona">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 20l6-11 4 6 3-4 5 9z"/><circle cx="17" cy="5" r="2"/>
+            </svg>
+          </span>
+          <h3>Escursioni</h3>
+          <p>Sei percorsi tra Grigna, Grignetta, Resegone, Cornizzolo e Monte Barro, con traccia GPX, profilo altimetrico e meteo.</p>
+          <span class="card-sezione-link">Vai ai sentieri →</span>
+        </a>
+        <a class="card-sezione" href="arrampicata/index.html" style="--img: url('../img/home/arrampicata.jpg'); --colore: #6b4a34">
+          <span class="card-sezione-numero" aria-hidden="true">4<small>falesie</small></span>
+          <span class="card-sezione-icona">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v4M12 17v4"/><circle cx="12" cy="12" r="5"/><path d="M8.5 8.5 6 6M15.5 15.5 18 18"/>
+            </svg>
+          </span>
+          <h3>Arrampicata</h3>
+          <p>Le falesie della zona su una mappa interattiva: gradi, avvicinamento, esposizione, foto e il tuo logbook delle vie.</p>
+          <span class="card-sezione-link">Vai alle falesie →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Le cime in ordine di quota (altezza dei picchi proporzionale alla quota) -->
+    <section class="quote" aria-labelledby="quote-titolo">
+      <div class="contenitore titolo-sezione">
+        <p class="occhiello">Dal lago alle creste</p>
+        <h2 id="quote-titolo">Da 214 a 2410 metri</h2>
+        <p>Le cime dei miei percorsi, dalla più bassa alla più alta.</p>
+      </div>
+      <ol class="quote-lista">
+        <li style="--q: 922"><span class="quote-m">922</span><span class="quote-nome">Monte Barro</span><span class="quote-picco"></span></li>
+        <li style="--q: 1241"><span class="quote-m">1241</span><span class="quote-nome">Cornizzolo</span><span class="quote-picco"></span></li>
+        <li style="--q: 1875"><span class="quote-m">1875</span><span class="quote-nome">Resegone</span><span class="quote-picco"></span></li>
+        <li style="--q: 2177"><span class="quote-m">2177</span><span class="quote-nome">Grignetta</span><span class="quote-picco"></span></li>
+        <li style="--q: 2410"><span class="quote-m">2410</span><span class="quote-nome">Grignone</span><span class="quote-picco"></span></li>
+      </ol>
+    </section>
+
+    <!-- Invito a uscire insieme -->
+    <section class="invito">
+      <div class="contenitore invito-griglia">
+        <div>
+          <p class="occhiello">Esci con me</p>
+          <blockquote class="invito-frase">Non serve essere esperti, serve solo la voglia di salire.</blockquote>
+          <p class="invito-testo">
+            Non hai mai fatto un'escursione o non sai con chi andare? Scrivimi: scegliamo insieme
+            un giro adatto a te e partiamo.
+          </p>
+          <a class="btn btn-pieno" data-sito="instagram" href="#">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+            Scrivimi su Instagram
+          </a>
+        </div>
+        <ul class="invito-punti">
+          <li><span class="num">1</span><div><strong>Al tuo ritmo</strong><span>Nessuna gara: ci si ferma, si guarda il panorama, si riparte.</span></div></li>
+          <li><span class="num">2</span><div><strong>Ti dico cosa portare</strong><span>Zaino, scarpe, acqua: prepariamo tutto insieme prima di partire.</span></div></li>
+          <li><span class="num">3</span><div><strong>Si parte dal facile</strong><span>Prima il Barro o il Cornizzolo, poi la Grignetta quando ti senti pronto.</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Meteo -->
+    <section class="sezione contenitore">
+      <div class="titolo-sezione">
+        <p class="occhiello">Prima di partire</p>
+        <h2>Meteo su Lecco</h2>
+        <p>Previsioni per i prossimi 5 giorni.</p>
+      </div>
+      <div id="meteo-home" class="meteo"></div>
+      <p class="fonte">Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+    </section>
+
+    <!-- Anteprima Chi sono: metti la tua foto in img/chi-sono/ritratto.jpg -->
+    <section class="sezione contenitore chi-sono-anteprima">
+      <div class="foto-ritratto" style="--img: url('../img/chi-sono/ritratto.jpg')" role="img" aria-label="Foto di Iacopo"></div>
+      <div>
+        <p class="occhiello">Chi sono</p>
+        <h2>Ciao, sono <span data-sito="autore">Iacopo</span></h2>
+        <p>
+          Vivo vicino a Lecco e appena posso salgo: un giro in Grignetta prima del lavoro, una giornata
+          in falesia nel weekend, il Resegone d'inverno. Qui raccolgo i percorsi e le pareti che conosco
+          meglio, con tracce, foto e consigli pratici.
+        </p>
+        <a class="btn btn-pieno" href="chi-sono.html">Scopri di più</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/meteo.js"></script>
+  <script>
+    mostraMeteo(document.getElementById("meteo-home"), SITO.base);
+  </script>
+</body>
+</html>

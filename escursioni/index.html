@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Percorsi · Lecco Verticale</title>
+  <meta name="description" content="Sei escursioni attorno a Lecco: Grigne, Resegone, Cornizzolo e Monte Barro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body data-root="../" data-pagina="escursioni" data-sotto="percorsi" data-titolo="Percorsi">
+  <div id="header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="contenitore">
+        <p class="occhiello">Escursioni</p>
+        <h1>I miei percorsi</h1>
+        <p>Dai sentieri facili del Monte Barro alle ferrate della Grignetta: scegli in base a difficoltà e montagna.</p>
+      </div>
+    </section>
+    <div id="subnav" data-sezione="escursioni"></div>
+
+    <section class="sezione contenitore">
+      <div class="filtri">
+        <div>
+          <span class="etichetta">Montagna</span>
+          <div class="chips" id="filtro-montagna"></div>
+        </div>
+        <div>
+          <span class="etichetta">Difficoltà (scala CAI)</span>
+          <div class="chips" id="filtro-difficolta"></div>
+        </div>
+        <div>
+          <label for="cerca">Cerca</label>
+          <input class="campo-testo" id="cerca" type="search" placeholder="Nome del percorso">
+        </div>
+      </div>
+      <p class="conteggio" id="conteggio" aria-live="polite"></p>
+      <div class="griglia-percorsi" id="elenco"></div>
+      <p class="fonte">
+        T turistico · E escursionistico · EE per escursionisti esperti · EEA con attrezzatura.
+        Durata stimata per un passo medio, dislivello e distanza calcolati dalla traccia GPX.
+      </p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../data/percorsi.js"></script>
+  <script src="../js/gpx.js"></script>
+  <script src="../js/escursioni-lista.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esci con me · Lecco Verticale</title>
+  <meta name="description" content="Non serve essere esperti, serve solo la voglia di salire. Scrivimi e scegliamo insieme una prima uscita.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try { const t = localStorage.getItem("tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body data-root="" data-pagina="esci-con-me" data-titolo="Esci con me">
+  <div id="header"></div>
+
+  <main>
+    <section class="invito invito-pagina">
+      <div class="contenitore">
+        <p class="occhiello">Esci con me</p>
+        <h1 class="invito-frase invito-grande">Non serve essere esperti, serve solo la voglia di salire.</h1>
+        <p class="invito-testo">
+          Non hai mai fatto un'escursione, o non sai con chi andare? Scrivimi: scegliamo insieme
+          un giro adatto a te e partiamo.
+        </p>
+        <a class="btn btn-pieno" data-sito="instagram" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+          </svg>
+          Scrivimi su Instagram
+        </a>
+      </div>
+    </section>
+
+    <section class="sezione contenitore">
+      <div class="titolo-sezione">
+        <p class="occhiello">Come funziona</p>
+        <h2>Tre passi e si parte</h2>
+      </div>
+      <div class="passi">
+        <div class="passo pannello">
+          <span class="num">1</span>
+          <h3>Mi scrivi</h3>
+          <p>Mandami un messaggio su Instagram e raccontami che esperienza hai, anche se è zero.</p>
+        </div>
+        <div class="passo pannello">
+          <span class="num">2</span>
+          <h3>Scegliamo il giro</h3>
+          <p>Ti propongo un percorso adatto a te e alla stagione, e ti dico cosa portare.</p>
+        </div>
+        <div class="passo pannello">
+          <span class="num">3</span>
+          <h3>Si parte</h3>
+          <p>Al tuo ritmo, con le pause che servono e il panorama come premio.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sezione contenitore" style="padding-top:0">
+      <div class="titolo-sezione">
+        <p class="occhiello">Per cominciare</p>
+        <h2>Giri facili da cui partire</h2>
+        <p>Percorsi turistici o escursionistici, perfetti per una prima uscita.</p>
+      </div>
+      <div class="griglia-percorsi" id="partenze"></div>
+    </section>
+
+    <section class="sezione contenitore" style="padding-top:0">
+      <div class="titolo-sezione">
+        <p class="occhiello">Domande frequenti</p>
+        <h2>Prima di scrivermi</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Non ho mai fatto un'escursione, posso venire?</summary>
+          <p>Certo, è proprio per questo che esiste questa pagina. Si comincia da giri facili e si sale di livello solo quando ti senti pronto.</p>
+        </details>
+        <details>
+          <summary>Cosa devo portare?</summary>
+          <p>Scarpe da trekking (o comode con buona suola), acqua, qualcosa da mangiare e una giacca. Prima di partire ti mando una lista precisa in base al giro. Intanto puoi dare un'occhiata alla <a href="escursioni/checklist.html">checklist zaino</a>.</p>
+        </details>
+        <details>
+          <summary>E se il meteo è brutto?</summary>
+          <p>Si guarda il meteo insieme il giorno prima e, se serve, si sposta l'uscita. In montagna la sicurezza viene prima del programma.</p>
+        </details>
+        <details>
+          <summary>Si può provare anche l'arrampicata?</summary>
+          <p>Sì, ma con calma: prima conviene un'uscita in montagna per capire se ti piace l'ambiente. Poi si può parlare di una prima giornata in falesia.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="data/percorsi.js"></script>
+  <script>
+    // Mostra i percorsi più semplici (T ed E) come proposte per iniziare
+    document.getElementById("partenze").innerHTML = PERCORSI
+      .filter((p) => p.difficolta === "T" || p.difficolta === "E")
+      .map((p) => {
+        const img = p.foto[0] ? `style="--img: url('../${p.foto[0].file}')"` : "";
+        return `
+          <a class="card-percorso" href="escursioni/percorso.html?id=${p.id}">
+            <div class="card-img" ${img}><span class="diff diff-${p.difficolta}" title="${DIFFICOLTA[p.difficolta].nome}">${p.difficolta}</span></div>
+            <div class="card-corpo">
+              <p class="occhiello">${p.montagna}</p>
+              <h3>${p.nome}</h3>
+              <ul class="stats"><li>${DIFFICOLTA[p.difficolta].nome}</li></ul>
+            </div>
+          </a>`;
+      })
+      .join("");
+  </script>
+</body>
+</html>
